@@ -1,10 +1,17 @@
 ---
-title: "Suitability prevalence area index in late quaternary explains genetic diversity"
-author: "Norma Hernandez, Angel Robles, Nathan Upham"
-date: "2023-07-08"
-output: word_document
+title: Suitability prevalence area index in late quaternary explains genetic diversity in Tassel eared Squirrels
+author: "Norma Hernandez, Angel Robles Nathan Upham"
+date: "2023-06-27"
+includes:
+  in_header: preamble.tex
+output: 
+  pdf_document:
+    fig_caption: yes
+    latex_engine: xelatex 
+    keep_tex: true
 bibliography: R21_citation.bib
 ---
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -220,7 +227,5 @@ From the model we extrapolated the values from SPA along the geography to new $F
 <p align="center">
 ![Projection of the $F_{st}$ model to the geography in the actual distribution of *S aberti*](all_figures/figure_6.png){width=80%}
 </p>
-
-## Discussion
 
 ### References
