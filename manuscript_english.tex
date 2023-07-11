@@ -194,7 +194,7 @@ seeking as a principle the conditions necessary for fitness and not the
 response of taxa.
 
 That is, we simplify our model (as is done in the physical sciences) to
-link through fitness the changes in biological populations and their
+link through evolutionary fitness the changes in biological populations and their
 structure, observed through population genetics, with patterns of
 spatial distribution over time. Thus, the goal is to link biogeographic
 patterns and evolutionary processes of populations in a single
@@ -236,7 +236,7 @@ statistical models to explain the relationship.
 \paragraph{Environment, fitness and
 suitability}\label{environment-fitness-and-suitability}}
 
-For a given region \(\mathbf{G}\) in te geography, at any point in time,
+For a given region \(\mathbf{G}\) in the geography, at any point in time,
 we have a set of existing environmental conditions
 \(\mathbf{E}(\mathbf{G}, t) = \Big \{ \vec{e}_i; \mathbf{G}, t\Big \}\).
 We define \(\vec{e}_i =(e_1, e_2, ..., e_v )_i\) as a vector of
@@ -246,7 +246,7 @@ environmental variables \(\mathbf{E}(\mathbf{G}, t)\). Then
 that is, for a species with non-overlapping generations, the
 population's net reproductive rate \(R_0\) is a measure of fitness that
 depends on environmental conditions. If we take the set of places in
-environmental space where these values are greater than a threshold, we
+environmental space where these values are greater than a threshold (\textit{k}), we
 can define a volume in multidimensional space such that \(R(\vec{e})\)
 is always positive and greater than this threshold, that is
 \(\mathbf{N}_F=\{\vec{e} | R_0(\vec{e}) \ge k \}\). i. e. the set of
@@ -254,7 +254,7 @@ environmental conditions for which values of fitness are capable of
 sustaining populations. We call
 \(\mathbf{N}_F \subseteq \mathbf{E}(\mathbf{G}, t)\). This is a way of
 expressing the fundamental niche as a function of environmental
-conditions. So we can correspong each point of geography to
+conditions. So we can corresponding each point of geography to
 environmental space, with different environmental conditions and
 different growth rates. However all sites within the region defined by
 \(\mathbf{N}_F\) will have viable populations and positive rates
@@ -265,7 +265,7 @@ at each time: \(R_0 = R_0(\vec{e}(t)) \}\). Thus locally the growth rate
 will be related to the local population size as long as it is within the
 boundary defined by \(\mathbf{N}_F\).
 
-This equation was proposed by Soberon and Peterson Soberón and Peterson
+This equation was proposed by Soberón and Peterson
 (2020) to relate demographics to a function of fitness and environment.
 In that study they tested the validity with monthly variables and
 empirical values on a short time scale. relating life history parameters
@@ -282,7 +282,7 @@ values of the set \(\mathbf{N}_F\) where \(R_0(\vec{e}_i) > 1\). In a
 practical way, instead of \(\mathbf{N}_F\), we approximated
 \(\mathbf{N}_F^{*}(\mathbf{G, t}) = \mathbf{E} \cap \mathbf{N}_F\) (the
 existing niche) from known presence points in the geography
-\(\mathbf{G}\) obtained from emprical observations stored in database,
+\(\mathbf{G}\) obtained from empirical observations stored in database,
 and map to \(\mathbf{E}\) in order to numerically fitting a convex
 volume of the environmental space that enclose the known information.
 
@@ -311,7 +311,7 @@ Once we have an approximation of this volume, we consider that each
 point in the geography is static and has a trajectory in the
 environmental space and for each trajectory the fitness function changes
 and therefore the suitability function changes but not in a homogeneous
-way, so each site presents different displacement rates in envrionmental
+way, so each site presents different displacement rates in environmental
 spaces and as a consequence, different demographic rates. So we can
 establish that for each site \(i\) in geographic space \(\mathbf{G}\),
 there is a population size \(N_i\) that changes with respect to a
@@ -340,9 +340,8 @@ F_{st}(t) = 1 - e^{-kt/N_e }
 
 where we assume, according to Nei (Nei 1986), that genetic drift within
 each subpopulation causes the average heterozygosity between populations
-(\(H_s\)) to approach zero (\(F_{st} = 1 - H_s/H_t\)), i.e., for \(t=0\)
-\(F_{st} = 0\) and for very large \(t\) the index is \(1\). that is, for
-\(t=0\) \(F_{st} = 0\) and for very large \(t\) the index is \(1\). We
+(\(H_s\)) to approach zero (\(F_{st} = 1 - H_s/H_t\)). That is, for
+\(t=0\) , \(F_{st} = 0\), and for very large \(t\) the index is \(1\). We
 have included a constant \(k\) without loss of generalization.
 
 Using
@@ -376,10 +375,10 @@ considered, For simplification in the index we select a \(N_i\)
 population in the geography and infer that locally, this population is
 proportional to the environmental suitability in each time considered,
 i. e. \(N_{j} \propto S_{j}(\vec{e}_{j})\) (each index \(j\) is for the
-generation time), as we describe above, so we can asume an harmonic mean
+generation time), as we describe above, so we can assume an harmonic mean
 of suitabilities
 \(\frac{1}{\tau}\sum_{j = 1}^{\tau} \frac{1}{S_j} = \frac{1}{S}\) and
-substitue in the previous equation:
+substitute in the previous equation:
 
 \[
 F_{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{S_j(\vec{e_j})}
@@ -397,7 +396,7 @@ in the geography:
 F_{i}^{st}= \frac{\beta_0}{S_i} + \beta_1
 \] If we consider all sites in the available geography, we call this
 harmonic \emph{Suitability Prevalence Area}
-\(\mathbf{S} = \{S_i | S_i > k\}\) since we expect that areas where the
+\(\mathbf{S} = \{S_i | S_i > s\}\), where \textit{s} is a threshold for the endemic historic area (see below), since we expect that areas where the
 \(F_{st}\) is lower are in areas where the prevalence over time is
 higher, i.e.~environmental conditions remain suitable for a significant
 period of time and therefore no effects of genetic drift of populations
@@ -479,7 +478,7 @@ a case study because:
   There are sufficient occurrence records for the entire range of the
   known distribution.
 \item
-  It has low speciation rate (0.25) (Upham, Esselstyn, and Jetz 2019),
+  It has low speciation rate (0.25) and \textit{ca.} 5 million year divergence time from other squirrels (Upham, Esselstyn, and Jetz 2019); 
   therefore, we assume that its fundamental niche is stable over time.
 \item
   There is fixation index information (Bono et al. 2018) for different
@@ -635,14 +634,14 @@ pixel has had ideal conditions. For our study, we consider the value of
 years, which is a significantly evolutionary time to fix genetic
 patterns at the population level.
 
-\hypertarget{fixation-index-as-a-functino-of-spa}{%
-\subsubsection{Fixation index as a functino of
-SPA}\label{fixation-index-as-a-functino-of-spa}}
+\hypertarget{fixation-index-as-a-function-of-spa}{%
+\subsubsection{Fixation index as a function of
+SPA}\label{fixation-index-as-a-function-of-spa}}
 
 To test our hypothesis of genetic diversity as a function of
 environmental suitability prevalence, from a set of genetically
 structured populations, a matrix of fixation indices between populations
-is considered. For this work we considerer the data from @Bono et al.
+is considered. For this work we considerer the data from Bono et al.
 (2018). It consideres 10 populations along the known distribution and
 provides values of \(F_{st}\) between this populations in matrix form.
 The matrix was transformed into a table as pairs between populations
@@ -721,10 +720,10 @@ in the United States and some Areas of the Volcanic Belt in Mexico
 \begin{figure}
 \centering
 \includegraphics{all_figures/figure_4.png}
-\caption{Suitability prevalence area. Here we observe the harmonic mean
-of suitability for each pixel along the distribucion from 0 to 1. The
+\caption{Suitability prevalence area of \textit{Sciurus aberti} over the last 120,000 years. Here we observe the harmonic mean
+of suitability for each pixel along the distribution from 0 to 1. The
 bold lines shows the the area when the harmonic mean es above 0.5
-threshold (blud line) and 0.9 threshold (black line)}
+threshold (blue line) and 0.9 threshold (black line)}
 \end{figure}
 
 \hypertarget{fst-as-a-funciton-of-spa-and-fixation-index-projected-in-geography}{%
@@ -737,8 +736,8 @@ population with an R-squared value of 0.794.
 
 \begin{longtable}[]{@{}ccc@{}}
 \caption{R squared from linear models (fixation index as a function of
-suitability prevalence area). The only R squared with statistical
-significance is barberi}\tabularnewline
+suitability prevalence area for the localities as listed in Bono et al. 2018). The only R squared with statistical
+significance is for \textit{S. a. barberi}.}\tabularnewline
 \toprule\noalign{}
 population & r.squared & p.value \\
 \midrule\noalign{}
@@ -749,16 +748,16 @@ population & r.squared & p.value \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-S. a. aberti Carson-SFW & 0.000 & 0.962 \\
-S. a. aberti Coconino-Gila & 0.131 & 0.304 \\
-S. a. aberti MT-Zuni & 0.002 & 0.894 \\
-S. a. aberti San Juan & 0.000 & 0.952 \\
-S. a. barberi & 0.794 & 0.001 \\
-S. a. chuscensis E & 0.002 & 0.892 \\
-S. a. chuscensis W & 0.018 & 0.713 \\
-S. a. ferreus Carson E & 0.040 & 0.581 \\
-S. a. ferreus Pike & 0.000 & 0.967 \\
-S. a. kaibabensis & 0.005 & 0.841 \\
+\textit{S. a. aberti} Carson-SFW & 0.000 & 0.962 \\
+\textit{S. a. aberti} Coconino-Gila & 0.131 & 0.304 \\
+\textit{S. a. aberti} MT-Zuni & 0.002 & 0.894 \\
+\textit{S. a. aberti} San Juan & 0.000 & 0.952 \\
+\textit{S. a. barberi} & 0.794 & 0.001 \\
+\textit{S. a. chuscensis} E & 0.002 & 0.892 \\
+\textit{S. a. chuscensis} W & 0.018 & 0.713 \\
+\textit{S. a. ferreus} Carson E & 0.040 & 0.581 \\
+\textit{S. a. ferreus} Pike & 0.000 & 0.967 \\
+\textit{S. a. kaibabensis} & 0.005 & 0.841 \\
 \end{longtable}
 
 It can be noted that S. a. aberti Coconino-Gila had an R-squared value
@@ -782,8 +781,12 @@ index from \emph{S. a. barberi} population. (Figure 6)
 \centering
 \includegraphics[width=0.8\textwidth,height=\textheight]{all_figures/figure_6.png}
 \caption{Projection of the \(F_{st}\) model to the geography in the
-actual distribution of \emph{S aberti}}
+ current distribution of \emph{S. aberti}.}
 \end{figure}
+
+
+Discussion
+
 
 \hypertarget{references}{%
 \subsubsection*{References}\label{references}}
