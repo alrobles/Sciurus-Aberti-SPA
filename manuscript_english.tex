@@ -110,26 +110,6 @@ genetic diversity in Tassel eared Squirrels}
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
 
-As a case study we consider squirrels (\emph{Sciurus aberti}), a species
-currently distributed in disjunct patches from the southern Rocky
-Mountains in the United States to the northern Sierra Madre Occidental
-in Mexico for which it is possible to find reliable information on both
-the genetic structure of its populations and its current distribution
-(Bono et al. 2018; Burgin et al. 2018).
-
-Our results reveal that fitness prevalence corresponds to the fixation
-index of \emph{S. aberti} populations with respect to a source
-population. Populations closer to the historical endemic area present a
-higher genetic diversity and a lower \(F_{st}\) value. Finally, this
-study allows us to add a biogeographic explanation to the results
-obtained with population genetic methods and to generate maps of this
-structure as tools to support conservation with a perspective that
-integrates both population genetics and historical patterns of species
-distribution.
-
-\hypertarget{introduction}{%
-\subsection{Introduction}\label{introduction}}
-
 The current distributions of species do not always correspond to their
 historical distributions over evolutionarily significant periods. This
 is because environmental conditions are not static over time; species
@@ -170,6 +150,26 @@ function of SPA was performed. With this statistical model, the fixation
 index values were projected to the current distribution to obtain a map
 with the geographic pattern of this index.
 
+As a case study we consider squirrels (\emph{Sciurus aberti}), a species
+currently distributed in disjunct patches from the southern Rocky
+Mountains in the United States to the northern Sierra Madre Occidental
+in Mexico for which it is possible to find reliable information on both
+the genetic structure of its populations and its current distribution
+(Bono et al. 2018; Burgin et al. 2018).
+
+Our results reveal that suitability prevalence corresponds to the
+fixation index of \emph{S. aberti} populations with respect to a source
+population. Populations closer to the historical endemic area present a
+higher genetic diversity and a lower \(F_{st}\) value. Finally, this
+study allows us to add a biogeographic explanation to the results
+obtained with population genetic methods and to generate maps of this
+structure as tools to support conservation with a perspective that
+integrates both population genetics and historical patterns of species
+distribution.
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
 \hypertarget{theoretical-basis}{%
 \subsubsection{Theoretical basis}\label{theoretical-basis}}
 
@@ -195,9 +195,8 @@ environmental conditions for which values of fitness are capable of
 sustaining populations. We call
 \(\mathbf{N}_F \subseteq \mathbf{E}(\mathbf{G}, t)\). This is a way of
 expressing the fundamental niche as a function of environmental
-conditions. So we can map each point of geography to ambient space. and,
-for each site in the geography there will correspond a site in the
-environmental space with different environmental conditions and
+conditions. So we can correspong each point of geography to
+environmental space, with different environmental conditions and
 different growth rates. However all sites within the region defined by
 \(\mathbf{N}_F\) will have viable populations and positive rates
 depending on time because we assume that the environment is dynamic and
@@ -245,8 +244,8 @@ N_i \propto  S_i(\vec{e}_i)
 \centering
 \includegraphics[width=0.5\textwidth,height=\textheight]{all_figures/figure_1.png}
 \caption{Hypothetical niche in environmental space. An arbitrary point
-moves within the ambient space entering and exiting the volume (niche)
-where the intrinsic growth rate is positive.}
+moves within the environmental space entering and exiting the volume
+(niche) where the intrinsic growth rate is positive.}
 \end{figure}
 
 Once we have an approximation of this volume, we consider that each
@@ -298,13 +297,14 @@ F_{st} \approx \frac{kt}{N_e} + C
 Moreover, the effective population can be estimated as the harmonic mean
 of the population in a demographic time series (Karlin 1968) for
 \(\tau\) generations
-\(\frac{1}{N_e} \approx \frac{1}{\tau}\Big({\frac{1}{N_1} + \frac{1}{N_2} + ... + \frac{1}{N_\tau} } \Big)\).
-We substitute the harmonic mean into the above equation, considering
-that although the number of generations is not exactly equal to the time
-of the fixation index, they are expected to be very close.
+\(\frac{1}{N_e} \approx \frac{1}{\tau}\Big({\frac{1}{N_1} + \frac{1}{N_2} + ... + \frac{1}{N_\tau} } \Big)\)
+for each \(i\) site in \(\mathbf{G}\). We substitute the harmonic mean
+into the above equation, considering that although the number of
+generations is not exactly equal to the time of the fixation index, they
+are expected to be very close:
 
 \[
-F_{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{N_j} 
+F_{i}^{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{N_{ij}} 
 \]
 
 \hypertarget{relationship-between-the-fixation-index-and-environmental-suitability}{%
@@ -331,13 +331,13 @@ We call this harmonic mean of environmental suitability
 \(1\), since it reflects the rate of population growth as a function of
 environment over a period of time. Thus we have a way to check that the
 loss of heterozygosity (through the fixation index \(F_{st}\)) is
-inversely proportional to the fitness prevalence for an \(i\) site in
-the geography:
+inversely proportional to the suitability prevalence for an \(i\) site
+in the geography:
 
 \[
 F_{i}^{st}= \frac{\beta_0}{S_i} + \beta_1
 \] If we consider all sites in the available geography, we call this
-harmonic mean of fitness \emph{Suitability prevalence Area}
+harmonic \emph{Suitability Prevalence Area}
 \(\mathbf{S} = \{S_i | S_i > k\}\) since we expect that areas where the
 \(F_{st}\) is lower are in areas where the prevalence over time is
 higher, i.e.~environmental conditions remain suitable for a significant
@@ -585,9 +585,9 @@ environmental suitability prevalence, from a set of genetically
 structured populations, a matrix of fixation indices between populations
 is considered. For this work we considerer the data from @Bono et al.
 (2018). It consideres 10 populations along the known distribution and
-provides values of \(F_st\) between this populations in matrix form. The
-matrix was transformed into a table as pairs between populations with
-index values between each pair. The values of the population with
+provides values of \(F_{st}\) between this populations in matrix form.
+The matrix was transformed into a table as pairs between populations
+with index values between each pair. The values of the population with
 itself, i.e.~\(0\), were included. Subsequently, georeferences were
 obtained for each population considered in the fixation index matrix.
 From this geo-referencing the SPA value for each population was
