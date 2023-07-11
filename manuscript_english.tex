@@ -230,10 +230,10 @@ volume of the environmental space that enclose the known information.
 
 The objective of our approach is not to know the function of \(R_0\) but
 rather to relate this local variation and the function \(\mathbf{N}_F\)
-with a function \$ S\_i(~vec\{e\}\_i)\$ of environmental suitability
-that can be estimated from known methods of applied mathematics and
-machine learning (for example the case of Maxent, Phillips, Anderson,
-and Schapire (2006)).
+with a function \(S_i(\vec{e}_i)\) of environmental suitability that can
+be estimated from known methods of applied mathematics and machine
+learning (for example the case of Maxent, Phillips, Anderson, and
+Schapire (2006)).
 
 Population size locally is a function of environmental suitability,
 where if suitability is \(0\) the population is \(0\) and if suitability
@@ -370,17 +370,18 @@ The method for estimating SPA consists of a series of 4 steps:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  model the potential distribution of a taxon with present-day
+  Model the potential distribution of a taxon with present-day
   environmental conditions and obtain an environmental suitability map.
 \item
   Project the potential distribution model to various environmental
   scenarios in the past with constant time steps and obtain the
   environmental suitability for each time scenario.
 \item
-  Characterize past analogous climates and retain projections only for
-  sites with climates analogous to the present.
+  Characterize past environments and retain projections only for sites
+  with analogous environmental conditions to the present.
 \item
-  Generate a harmonic mean suitability map for all time slices.
+  Calculate the harmonic mean of the suitability for all the sites all
+  time slices.
 \end{enumerate}
 
 Subsequently, one application of the SPA is to explain genetic diversity
