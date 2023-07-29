@@ -1,0 +1,203 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Suitability prevalence area index in late quaternary explains genetic diversity in Tassel eared Squirrels},
+  pdfauthor={Norma Hernandez, Angel Robles Nathan Upham},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Suitability prevalence area index in late quaternary explains
+genetic diversity in Tassel eared Squirrels}
+\author{Norma Hernandez, Angel Robles Nathan Upham}
+\date{2023-06-27}
+
+\begin{document}
+\maketitle
+
+\hypertarget{abstract}{%
+\subsection{Abstract}\label{abstract}}
+
+The current distributions of species do not always correspond to their
+historical distributions over evolutionarily significant periods. This
+is because environmental conditions are not static over time; species
+tend to distribute where conditions are most favorable.
+
+It follows from this relationship between environment and species
+distribution that population size also varies with time. This variation
+in population size is related to the effective population size \(N_e\),
+so that an index reflecting changes in environmental conditions in
+geography might be expected to be related to \(N_e\) and thus to
+indicators of population structure such as the fixation index
+\(F_{st}\). Thus, it is possible to relate patterns of changes in the
+distribution of species to the genetic structure of their populations
+using a statistical model that explains this relationship.
+
+With this approach we can predict the geographic pattern of population
+structure from environmental information. This approach is strongly
+driven by advances in currently available climate simulations (Leonardi
+et al. 2023; Krapp et al. 2021), as well as next generation sequencing
+data, and supported by both ecological niche (Thorup et al. 2021;
+Nogués-Bravo 2009) and population genetics theories (Lira-Noriega and
+Manthey 2014).
+
+In this work we propose a method to find the Suitability Prevalence Area
+(SPA) as an index with a double purpose: 1) to find endemic areas to
+delimit the historical distribution of the species and 2) to explain the
+patterns of genetic diversity.
+
+To obtain the SPA, we performed a historical reconstruction of the
+geographical range back to 120 000 BC at 2 000 year intervals and
+recorded the environmental suitability at each site.
+
+Subsequently, we delimited historical endemic areas to locations where
+the prevalence of suitability remained at 90\% during this period. From
+the fixation index calculated with respect to populations in the
+historical endemic areas, a statistical model of the fixation index as a
+function of SPA was performed. With this statistical model, the fixation
+index values were projected to the current distribution to obtain a map
+with the geographic pattern of this index.
+
+As a case study we consider squirrels (\emph{Sciurus aberti}), a species
+currently distributed in disjunct patches from the southern Rocky
+Mountains in the United States to the northern Sierra Madre Occidental
+in Mexico for which it is possible to find reliable information on both
+the genetic structure of its populations and its current distribution
+(Bono et al. 2018; Burgin et al. 2018).
+
+Our results reveal that suitability prevalence corresponds to the
+fixation index of \emph{S. aberti} populations with respect to a source
+population. Populations closer to the historical endemic area present a
+higher genetic diversity and a lower \(F_{st}\) value. Finally, this
+study allows us to add a biogeographic explanation to the results
+obtained with population genetic methods and to generate maps of this
+structure as tools to support conservation with a perspective that
+integrates both population genetics and historical patterns of species
+distribution.
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-bono2018genome}{}}%
+Bono, Jeremy M, Helen K Pigage, Peter J Wettstein, Stephanie A Prosser,
+and Jon C Pigage. 2018. {``Genome-Wide Markers Reveal a Complex
+Evolutionary History Involving Divergence and Introgression in the
+Abert's Squirrel (Sciurus Aberti) Species Group.''} \emph{BMC
+Evolutionary Biology} 18 (1): 1--17.
+
+\leavevmode\vadjust pre{\hypertarget{ref-burgin2018many}{}}%
+Burgin, Connor J, Jocelyn P Colella, Philip L Kahn, and Nathan S Upham.
+2018. {``How Many Species of Mammals Are There?''} \emph{Journal of
+Mammalogy}. Oxford University Press US.
+
+\leavevmode\vadjust pre{\hypertarget{ref-krapp2021statistics}{}}%
+Krapp, Mario, Robert M Beyer, Stephen L Edmundson, Paul J Valdes, and
+Andrea Manica. 2021. {``A Statistics-Based Reconstruction of
+High-Resolution Global Terrestrial Climate for the Last 800,000
+Years.''} \emph{Scientific Data} 8 (1): 228.
+
+\leavevmode\vadjust pre{\hypertarget{ref-leonardi2023pastclim}{}}%
+Leonardi, Michela, Emily Y Hallett, Robert Beyer, Mario Krapp, and
+Andrea Manica. 2023. {``Pastclim 1.2: An r Package to Easily Access and
+Use Paleoclimatic Reconstructions.''} \emph{Ecography}, e06481.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lira2014relationship}{}}%
+Lira-Noriega, Andrés, and Joseph D Manthey. 2014. {``Relationship of
+Genetic Diversity and Niche Centrality: A Survey and Analysis.''}
+\emph{Evolution} 68 (4): 1082--93.
+
+\leavevmode\vadjust pre{\hypertarget{ref-nogues2009predicting}{}}%
+Nogués-Bravo, David. 2009. {``Predicting the Past Distribution of
+Species Climatic Niches.''} \emph{Global Ecology and Biogeography} 18
+(5): 521--31.
+
+\leavevmode\vadjust pre{\hypertarget{ref-thorup2021response}{}}%
+Thorup, Kasper, Lykke Pedersen, Rute R Da Fonseca, Babak Naimi, David
+Nogués-Bravo, Mario Krapp, Andrea Manica, et al. 2021. {``Response of an
+Afro-Palearctic Bird Migrant to Glaciation Cycles.''} \emph{Proceedings
+of the National Academy of Sciences} 118 (52): e2023836118.
+
+\end{CSLReferences}
+
+\end{document}

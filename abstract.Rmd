@@ -1,0 +1,63 @@
+---
+title: Suitability prevalence area index in late quaternary explains genetic diversity in Tassel eared Squirrels
+author: "Norma Hernandez, Angel Robles Nathan Upham"
+date: "2023-06-27"
+includes:
+  in_header: preamble.tex
+output: 
+  pdf_document:
+    fig_caption: yes
+    latex_engine: xelatex 
+    keep_tex: true
+bibliography: R21_citation.bib
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+The current distributions of species do not always correspond to their
+historical distributions over evolutionarily significant periods. This
+is because environmental conditions are not static over time; species
+tend to distribute where conditions are most favorable.
+
+It follows from this relationship between environment and species
+distribution that population size also varies with time. This variation in population size is related to the effective population size $N_e$, so that an index reflecting changes in environmental
+conditions in geography might be expected to be related to $N_e$ and
+thus to indicators of population structure such as the fixation index
+$F_{st}$. Thus, it is possible to relate patterns of changes in the
+distribution of species to the genetic structure of their populations
+using a statistical model that explains this relationship.
+
+With this approach we can predict the geographic pattern of population
+structure from environmental information. This approach is strongly
+driven by advances in currently available climate simulations
+[@leonardi2023pastclim; @krapp2021statistics], as well as next
+generation sequencing data, and supported by both ecological niche
+[@thorup2021response; @nogues2009predicting] and population genetics
+theories [@lira2014relationship].
+
+In this work we propose a method to find the Suitability Prevalence Area (SPA) as an index with a double purpose: 1) to find endemic areas to delimit the historical distribution of the species and 2) to explain the patterns of genetic diversity.
+
+To obtain the SPA, we performed a historical reconstruction of the
+geographical range back to 120 000 BC at 2 000 year intervals and
+recorded the environmental suitability at each site.
+
+Subsequently, we delimited historical endemic areas to locations where
+the prevalence of suitability remained at 90\% during this period. From the fixation index calculated with respect to populations in the
+historical endemic areas, a statistical model of the fixation index as a function of SPA was performed. With this statistical model, the fixation index values were projected to the current distribution to obtain a map with the geographic pattern of this index.
+
+As a case study we consider squirrels (*Sciurus aberti*), a species
+currently distributed in disjunct patches from the southern Rocky
+Mountains in the United States to the northern Sierra Madre Occidental
+in Mexico for which it is possible to find reliable information on both the genetic structure of its populations and its current distribution [@bono2018genome; @burgin2018many].
+
+Our results reveal that suitability prevalence corresponds to the
+fixation index of *S. aberti* populations with respect to a source
+population. Populations closer to the historical endemic area present a higher genetic diversity and a lower $F_{st}$ value. Finally, this study allows us to add a biogeographic explanation to the results obtained with population genetic methods and to generate maps of this structure as tools to support conservation with a perspective that integrates both population genetics and historical patterns of species distribution.
+

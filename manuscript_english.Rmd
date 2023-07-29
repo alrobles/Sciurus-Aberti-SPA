@@ -17,6 +17,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Abstract
+As a case study we consider squirrels (*Sciurus aberti*), a species currently distributed in disjunct patches from the southern Rocky Mountains in the United States to the northern Sierra Madre Occidental in Mexico for which it is possible to find reliable information on both the genetic structure of its populations and its current distribution [@bono2018genome; @burgin2018many]. 
+
+Our results reveal that fitness prevalence corresponds to the fixation index of *S. aberti* populations with respect to a source population. Populations closer to the historical endemic area present a higher genetic diversity and a lower $F_{st}$ value. Finally, this study allows us to add a biogeographic explanation to the results obtained with population genetic methods and to generate maps of this structure as tools to support conservation with a perspective that integrates both population genetics and historical patterns of species distribution.
+
+## Introduction
 
 The current distributions of species do not always correspond to their historical distributions over evolutionarily significant periods. This is because environmental conditions are not static over time; species tend to distribute where conditions are most favorable.
 
@@ -30,55 +35,41 @@ To obtain the SPA, we performed a historical reconstruction of the geographical 
 
 Subsequently, we delimited historical endemic areas to locations where the prevalence of suitability remained at 90% during this period. From the fixation index calculated with respect to populations in the historical endemic areas, a statistical model of the fixation index as a function of SPA was performed. With this statistical model, the fixation index values were projected to the current distribution to obtain a map with the geographic pattern of this index.
 
-As a case study we consider squirrels (*Sciurus aberti*), a species currently distributed in disjunct patches from the southern Rocky Mountains in the United States to the northern Sierra Madre Occidental in Mexico for which it is possible to find reliable information on both the genetic structure of its populations and its current distribution [@bono2018genome; @burgin2018many]. 
-
-Our results reveal that suitability prevalence corresponds to the fixation index of *S. aberti* populations with respect to a source population. Populations closer to the historical endemic area present a higher genetic diversity and a lower $F_{st}$ value. Finally, this study allows us to add a biogeographic explanation to the results obtained with population genetic methods and to generate maps of this structure as tools to support conservation with a perspective that integrates both population genetics and historical patterns of species distribution.
-
-## Introduction
-
-Relating the genetic structure of the populations of a species to its geographic distribution is a complicated challenge from the point of view of biogeography. The task is made easier if evolutionary history is incorporated on both sides of the relationship. 
-On the one hand, giving depth and an evolutionary perspective to the geographic distribution of a taxon relies primarily on ecological niche theory, and is driven by the massive amount of information currently available from both digitized biological collections and citizen science (through which records of taxa occurrence are
-through which records of taxa occurrence are available) as well as from environmental information available for geographic information systems and climate models. information systems and accurate climatological models of both the present and the past.
-
-This change in reproductive success is driven by a set of factors, however we propose in this work a conceptual framework where we consider only environmental factors at a macroecological scale, inspired by the concept of Grinnellian niches (those composed by sets of points of non-interactive variables in multidimensional spaces), seeking as a principle the necessary conditions for fitness and not the response of taxa. points of non-interactive variables in multidimensional spaces), seeking as a principle the conditions necessary for fitness and not the response of taxa.
-
-That is, we simplify our model (as is done in the physical sciences) to link through fitness the changes in biological populations and their structure, observed through population genetics, with patterns of spatial distribution over time. Thus, the goal is to link biogeographic patterns and evolutionary processes of populations in a single conceptual framework.
-
-It is from this Grinellian niche where we start, assuming that taxa in general have to be distributed in the geography where environmental conditions are more favorable, noting that the distribution of taxa is not static, depending on dynamic environmental conditions and therefore the current known distribution of a taxon does not always correspond to its historical distribution over time, since the current climate has not remained so for periods of time on scales relative to the processes of population genetics. (i. e. tens or hundreds of thousands of years). Even for some species these dynamics seem to induce ecological processes such as seasonal migrations in birds, or hibernation in mammals and frogs. But in general, environmental changes are reflected in geography as range expansions and contractions over time. That is, processes of population dynamics, driven by environmental fitness, in our approach. 
-
-This change in population dynamics is implied by the genetic structure of populations through the concept of effective population size $N_e$ [@wright1931evolution; @karlin1968rates]. 
-So if we set a similar time scale for these changes, we will be able to observe the fitness relationship (through population dynamics) in both genetic structure and distribution range changes over time.  That is, we need an index that reflects environmental changes in the geographic distribution of species and changes in the genetic structure of the population. In this case, we can consider the fixation index $F_{st}$ as an indicator of the difference between populations that come from a source population and that have undergone range shifts that we assume are driven by environmental changes. Under these assumptions we expect that it is possible to relate changes in the distribution of taxa to the genetic structure of their populations using statistical models to explain the relationship.
-
 ### Theoretical basis
 
 #### Environment, fitness and suitability
 
-For a given region $\mathbf{G}$ in te geography, at any point in time, we have a set of existing environmental conditions $\mathbf{E}(\mathbf{G}, t) = \Big \{ \vec{e}_i; \mathbf{G}, t\Big \}$. We define $\vec{e}_i =(e_1, e_2, ..., e_v )_i$ as a vector of environmental variables, that is, a point in the space of $v$ environmental variables $\mathbf{E}(\mathbf{G}, t)$. Then $R_0(\vec{e}_i)$ is a function that relates fitness to environment, that is, for a species with non-overlapping generations, the population's net reproductive rate $R_0$ is a measure of fitness that depends on environmental conditions. If we take the set of places in environmental space where these values are greater than a threshold, we can define a volume in multidimensional space such that $R(\vec{e})$ is always positive and greater than this threshold, that is $\mathbf{N}_F=\{\vec{e} | R_0(\vec{e}) \ge k \}$. i. e. the set of environmental conditions for which values of fitness are capable of sustaining populations. We call $\mathbf{N}_F \subseteq \mathbf{E}(\mathbf{G}, t)$. This is a way of expressing the fundamental niche as a function of environmental conditions. So we can correspong each point of geography to environmental space,  with different environmental conditions and different growth rates. However all sites within the region defined by $\mathbf{N}_F$ will have viable populations and positive rates depending on time because we assume that the environment is dynamic and each geographic point is static, so for each site in geographic space this growth rate depends on the environment and therefore is different at each time: $R_0 = R_0(\vec{e}(t)) \}$. Thus locally the growth rate will be related to the local population size as long as it is within the boundary defined by $\mathbf{N}_F$. 
+We define $\vec{e}_i =(e_1, e_2, ..., e_i )$ as a vector of environmental variables, that is, a point in the space of $v$ environmental variables. Then $R_i(\vec{e}_i)$ is a function that relates fitness to environment,
+that is, for a species with non-overlapping generations, the population's net reproductive rate $R_i$ is a measure of fitness that depends on environmental conditions. 
+
+That is, the sites in the geography $\mathbf{G}_o$ that present positive growth rates are related to favorable conditions.
+If we take the set of places in ambient space where these values are greater than a threshold, we can define a volume in multidimensional space such that $R(\vec{e})$ is always positive and greater than this threshold, that is $\mathbf{N}_F(t) = \{\vec{e} | R_0(\vec{e}(t)) > k \}$.
+
+This is a way of expressing the fundamental niche as a function of environmental conditions. So we can map each point of geography to ambient space. Thus, for each site in the geography there will correspond a site in the environmental space with different environmental conditions and different growth rates. However all sites within the region defined by $\mathbf{N}_F$ will have viable populations and positive rates. However, we assume that the environment is dynamic and each geographic point is static, so for each site in geographic space this growth rate depends on the environment and therefore is different at each time.
+
+Thus locally the growth rate will be related to the local population size as long as it is within the boundary defined by $\mathbf{N}_F$. Therefore, the local population size as a function of the intrinsic rate that depends on the change in environmental conditions over time is:
+$N_i(t+1) = R_0(\vec{e_i}(t) ) N_i(t)$. That is, the locally effective population size is a function of ideal environmental conditions.
+
+We start by considering this defined volume of the set of $R_0$ as a set of trajectories for each point from geographic space to environmental space. Considering this rate fixed $\mathbf{R}_0$ when the population grows, that is, $\mathbf{N}_F(t) = \{\vec{e} | R_0(\vec{e}(t)) > 1 \}$ and therefore any local population will have a positive growth rate.
+
+
+![Hypothetical niche in environmental space. An arbitrary point moves within the ambient space entering and exiting the volume (niche) where the intrinsic growth rate is positive.](all_figures/figure_1.png){width=50%}
+
 
 This equation was proposed by Soberon and Peterson @soberon2020shape to relate demographics to a function of fitness and environment. In that study they tested the validity with monthly variables and empirical values on a short time scale. relating life history parameters and the environmental suitability of niche models.
 
-This set can be seen as a convex volume in environmental space and we relate this growth rate to an environmental suitability function bounded between $0$ and $1$, for example, for a unimodal multivariate pdf, it would be equivalent to the distance from the maximum of the function. That is, the fitness-related environmental suitability can be any function such that it is $0$ if $R_0(\vec{e}_i) > 1$ and $1$ when $R_0$ is evaluated at the expected value of $\vec {e}(t)$ for all values of the set $\mathbf{N}_F$ where  $R_0(\vec{e}_i) > 1$. In a practical way, instead of $\mathbf{N}_F$, we approximated
-$\mathbf{N}_F^{*}(\mathbf{G, t}) = \mathbf{E} \cap \mathbf{N}_F$ 
-(the existing niche) from known presence points in the geography $\mathbf{G}$ obtained from emprical observations stored in database, and map to $\mathbf{E}$ in order to numerically fitting a convex volume of the environmental space that enclose the known information.
+This set can be seen as a convex volume in environmental space and we relate this growth rate to an environmental suitability function bounded between $0$ and $1$, for example, for a unimodal multivariate pdf, it would be equivalent to the distance from the maximum of the function. That is, the fitness-related environmental suitability can be any function such that it is $0$ if $R_i(\vec{e}_i) > 1$ and $1$ when $R$ is evaluated at the expected value of $\vec {e}$ for all values of $R_i(\vec{e}_i) > 1$. In a practical way, $\mathbf{N}_F$ is approximated from points of presence in the geography obtained from databases, numerically approximating a convex surface with a surface $\mathbf{N}_R$ of the environmental space.
 
+Once we have an approximation of this volume, we consider that each point in the geography is static and has a trajectory in the environmental space and that for each trajectory the fitness function changes and therefore the suitability function changes but not accordingly. in a homogeneous way, if not more so that each site presents different displacement rates and different demographic rates.
 
-The objective of our approach is not to know the function of $R_0$ but rather to relate this local variation and the function $\mathbf{N}_F$ with a function $S_i(\vec{e}_i)$ of environmental suitability that can be estimated from known methods of applied mathematics and machine learning (for example the case of Maxent, @phillips2006maximum).
+The objective of this theoretical approach is not to know the shape of the function of $R_0$ but rather to find this local variation relating this value of $R_0$ and the function $\mathbf{N}_F$ with a function $ S_i(\ vec{e}_i)$ of environmental suitability that can be estimated from known methods of applied mathematics and machine learning (for example the case of Maxent, @phillips2006maximum).
 
-Population size locally is a function of environmental suitability, where if suitability is $0$ the population is $0$ and if suitability is $1$ the population has a maximum growth rate $R_i(\vec{e}_i)$
+Es decir:
+
 $$
 N_i \propto  S_i(\vec{e}_i)
 $$
-
-
-![Hypothetical niche in environmental space. An arbitrary point moves within the environmental space entering and exiting the volume (niche) where the intrinsic growth rate is positive.](all_figures/figure_1.png){width=50%}
-
-
-Once we have an approximation of this volume, we consider that each point in the geography is static and has a trajectory in the environmental space and for each trajectory the fitness function changes and therefore the suitability function changes but not in a homogeneous way, so each site presents different displacement rates in envrionmental spaces and as a consequence, different demographic rates. So we can establish that for each site $i$ in geographic space $\mathbf{G}$, there is a population size $N_i$ that changes with respect to a fitness function dependent on time-varying environmental conditions:
-
-$$
-N_i(\vec{e}_i(t)) \propto  S_i(\vec{e}_i(t))
-$$
-
+Population size locally is a function of environmental suitability, where if suitability is $0$ the population is $0$ and if suitability is $1$ the population has a maximum growth rate $R_i(\vec{e}_i)$
 
 #### Genetic variation and effective population size
 
@@ -97,10 +88,10 @@ $$
 F_{st} \approx \frac{kt}{N_e} + C
 $$
 
-Moreover, the effective population can be estimated as the harmonic mean of the population in a demographic time series [@karlin1968rates] for $\tau$ generations $\frac{1}{N_e} \approx \frac{1}{\tau}\Big({\frac{1}{N_1} + \frac{1}{N_2} + ... + \frac{1}{N_\tau} } \Big)$ for each $i$ site in $\mathbf{G}$. We substitute the harmonic mean into the above equation, considering that although the number of generations is not exactly equal to the time of the fixation index, they are expected to be very close:
+Moreover, the effective population can be estimated as the harmonic mean of the population in a demographic time series [@karlin1968rates] for $\tau$ generations $\frac{1}{N_e} \approx \frac{1}{\tau}\Big({\frac{1}{N_1} + \frac{1}{N_2} + ... + \frac{1}{N_\tau} } \Big)$. We substitute the harmonic mean into the above equation, considering that although the number of generations is not exactly equal to the time of the fixation index, they are expected to be very close.
 
 $$
-F_{i}^{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{N_{ij}} 
+F_{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{N_j} 
 $$
 
 #### Relationship between the fixation index and environmental suitability
@@ -112,13 +103,13 @@ $$
 F_{st} \approx \Big (kt\Big)  \frac{1}{\tau}\sum_{j=1}^{\tau}\frac{1}{S_j(\vec{e_j})}
 $$
 
-We call this harmonic mean of environmental suitability *Suitability prevalence index *($S$) given between $0$ and $1$, since it reflects the rate of population growth as a function of environment over a period of time. Thus we have a way to check that the loss of heterozygosity (through the fixation index $F_{st}$) is inversely proportional to the suitability prevalence for an $i$ site in the geography:
+We call this harmonic mean of environmental suitability *Suitability prevalence index *($S$) given between $0$ and $1$, since it reflects the rate of population growth as a function of environment over a period of time. Thus we have a way to check that the loss of heterozygosity (through the fixation index $F_{st}$) is inversely proportional to the fitness prevalence for an $i$ site in the geography:
 
 
 $$
 F_{i}^{st}= \frac{\beta_0}{S_i} + \beta_1
 $$
-If we consider all sites in the available geography, we call this harmonic  *Suitability Prevalence Area* $\mathbf{S} = \{S_i | S_i > k\}$ since we expect that areas where the $F_{st}$ is lower are in areas where the prevalence over time is higher, i.e. environmental conditions remain suitable for a significant period of time and therefore no effects of genetic drift of populations have occurred. Conversely, it is expected that in populations with a high fixation index value, fitness will not have prevailed over the same time interval even though conditions currently exist and populations are present. 
+If we consider all sites in the available geography, we call this harmonic mean of fitness *Suitability prevalence Area* $\mathbf{S} = \{S_i | S_i > k\}$ since we expect that areas where the $F_{st}$ is lower are in areas where the prevalence over time is higher, i.e. environmental conditions remain suitable for a significant period of time and therefore no effects of genetic drift of populations have occurred. Conversely, it is expected that in populations with a high fixation index value, fitness will not have prevailed over the same time interval even though conditions currently exist and populations are present. 
 
 ## Methods
 
@@ -132,10 +123,10 @@ We propose a method to find the Suitability Prevalence Area (SPA) as an index wi
 
 The method for estimating SPA consists of a series of 4 steps:
 
-1. Model the potential distribution of a taxon with present-day environmental conditions and obtain an environmental suitability map.
+1. model the potential distribution of a taxon with present-day environmental conditions and obtain an environmental suitability map.
 2. Project the potential distribution model to various environmental scenarios in the past with constant time steps and obtain the environmental suitability for each time scenario.
-3. Characterize past environments and retain projections only for sites with analogous environmental conditions to the present.
-4. Calculate the harmonic mean of the suitability for all the sites all time slices.
+3. Characterize past analogous climates and retain projections only for sites with climates analogous to the present.
+4. Generate a harmonic mean suitability map for all time slices.
 
 Subsequently, one application of the SPA is to explain genetic diversity (the fixation index) as a function of the SPA and project it to the geography. For this it is necessary to perform a series of steps, which consist of:
 
@@ -168,14 +159,15 @@ In this study we selected a set of North American ecoregions for modeling to del
 #### Current distribution
 Estimating niche boundaries for species occurrence is called ecological niche modeling (ENM), and when the emphasis is on geographic distribution, it is known as species distribution modeling (SDM) [@guisan2005predicting; @peterson2012species; @saupe2012variation]. We model the current distribution of S. aberti using the MAXENT 3.4.4 algorithm [@phillips2006maximum], which is a correlative model based on the maximum entropy principle used to estimate species distributions. The output of Maxent is a relative occurrence rate (ROR) interpreted as a probability of habitat suitability given observed environmental conditions by presence-only points [@merow2013practical]. 
 
-The parameterization was performed with the default values of the program with the exception of the "extrapolate" and "clamping" options to avoid artificial extrapolations in the extreme values of the climatic variables used in the models. To calibrate the models we used 70\% of the records and the remaining 30\% to validate them. 
+The parameterization was performed with the default values of the program with the exception of the "extrapolate" and "clamping" options to avoid artificial extrapolations in the extreme values of the climatic variables used in the models. To calibrate the models we used 70% of the records and the remaining 30% to validate them. 
 
 In order to give statistical certainty and to consider uncertainty, as well as to reduce overfitting and to have a suitable model to extrapolate to past scenarios, 10 replications were performed for each model using a cross-validation with the training data. In the end, the average model of these replications was considered as the result.
 
 We evaluated the statistical significance of the resulting models for the present using the partial ROC test [@peterson2008rethinking], which is a modification of the ROC (receiver Operation Characteristic) test. The results of this test are proportions (ratios) of the area under the curve of the model with respect to a null model, product of repetitions that allow to statistically evaluate the areas under the curve (AUC) in relation to that expected by chance [@peterson2008rethinking], where a value derived by chance would be $0$ and an acceptable value, according to the proportion of minimum omission errors tolerated in the model, would be greater than $1$. A different set of test data was used on the average model of the replicates and in this way the reduction of overfitting was guaranteed.
 
 #### Reconstruction to the past
-The average model obtained from Maxent was extrapolated to environmental conditions into the past. Environmental layers were taken from pastclim [@leonardi2023pastclim] in 2000 year time slices to cover a total of 120 000 years. For each scenario into the past, 10 replicates were cross-validated and averaged.
+The average model obtained from Maxent was extrapolated to environmental conditions into the past. Environmental layers were taken from pastclim [@leonardi2023pastclim] in 2000 year time slices to cover a total of 120 000 years. For each scenario into the past, 10 replicates were cross-validated and averaged. For each projection into the past, as well as the model of the present, we generated a binary map at a suitability threshold of 90\% to get an estimate of the area distribution for each time slice in pixels. In addition we fit a locally estimated scatterplot smoothing (loess) model to the time series trend area using the R package stats in order to observe patterns in the area - timeline scatterplot. 
+
 
 #### Analogy of environmental conditions 
 To be certain that areas in the past are climatically analogous to the present we implemented the mobility-orient parity (MOP) test. This method generates a value from $0$ to $1$ according to the environmental analogy of past conditions to the present to eliminate geographic areas in the projections to the past outside of climates analogous to the present [@owens2013constraints].
@@ -187,11 +179,11 @@ A harmonic mean is performed as follows:
 For each layer the inverse of each cell value is obtained. Then the inverse values are summed by cells and divided by the number of scenarios. Finally, the inverse of each cell is obtained. It is important to consider that the Maxent outputs may contain very small values close to zero in many cells, for this reason we added a small amount of $0.001$ to all the values in all the maps so that when obtaining the harmonic mean we could have an inverse value for values close to zero without altering the biological sense of environmental suitability.
 
 ### Endemic historic Area
-To calculate the historic endemic area, the SPA result is taken and a threshold is applied to generate a binary map according to the $\mathbf{S}$ equation. This threshold is the proportion of time that pixel has had ideal conditions. For our study, we consider the value of 90\% since for a period of 120 000 years it is a coverage of 100 000 years, which is a significantly evolutionary time to fix genetic patterns at the population level.
+To calculate the historic endemic area, the SPA result is taken and a threshold is applied to generate a binary map according to the $mathbf{S}$ equation. This threshold is the proportion of time that pixel has had ideal conditions. For our study, we consider the value of 90\% since for a period of 120 000 years it is a coverage of 100 000 years, which is a significantly evolutionary time to fix genetic patterns at the population level.
 
 ### Fixation index as a functino of SPA
 
-To test our hypothesis of genetic diversity as a function of environmental suitability prevalence, from a set of genetically structured populations, a matrix of fixation indices between populations is considered. For this work we considerer the data from @@bono2018genome. It consideres 10 populations along the known distribution and provides values of $F_{st}$ between this populations in matrix form. The matrix was transformed into a table as pairs between populations with index values between each pair. The values of the population with itself, i.e. $0$, were included. Subsequently, georeferences were obtained for each population considered in the fixation index matrix. From this geo-referencing the SPA value for each population was extracted. Finally, the SPA value was aligned in the table of fixation index pairs. In total the table has 4 columns: source population, target population, fixation index and SPA of the target population. This table was separated by source population groups to generate a set of linear models between SPA values and fixation indexes $F_{st}$. An analysis was performed for each source population with the hypothesis that the correlation between SPA and fixation index exists and is non-zero if a dispersal process has occurred from the historical endemic area of the taxon.  
+To test our hypothesis of genetic diversity as a function of environmental suitability prevalence, from a set of genetically structured populations, a matrix of fixation indices between populations is considered. For this work we considerer the data from @@bono2018genome. It consideres 10 populations along the known distribution and provides values of $F_st$ between this populations in matrix form. The matrix was transformed into a table as pairs between populations with index values between each pair. The values of the population with itself, i.e. $0$, were included. Subsequently, georeferences were obtained for each population considered in the fixation index matrix. From this geo-referencing the SPA value for each population was extracted. Finally, the SPA value was aligned in the table of fixation index pairs. In total the table has 4 columns: source population, target population, fixation index and SPA of the target population. This table was separated by source population groups to generate a set of linear models between SPA values and fixation indexes $F_{st}$. An analysis was performed for each source population with the hypothesis that the correlation between SPA and fixation index exists and is non-zero if a dispersal process has occurred from the historical endemic area of the taxon.  
 
 ### Fixation index projected in geography
 The linear model that presents the highest value of $R^2$ is considered suitable to make a geographic projection of the fixation index and observe genetic diversity in geographic space.  To generate this map, the SPA values are taken and a table of coordinates and SPA values is generated for each cell of the raster. The SPA values are then extrapolated to obtain fixation index values from the linear model obtained previously. This column is added to the coordinate table and a raster is generated with the projected $F_{st}$ values. Finally, a cutoff of this raster is performed using a map of the distribution of the species at present with a cutoff threshold of 90% in binary format (where $1 =$presence and $0 =$ absence), since the records of the presence localities were obtained from bases that might contain some errors in the data [@phillips2006maximum].  
@@ -200,20 +192,21 @@ The linear model that presents the highest value of $R^2$ is considered suitable
 ## Results
 
 ### Current and past distribution
-We show the species distribution model for *Sciurus aberti*  along the time line of the projected area per time slice. We show 5 notable moments in time line. 
-and 5 notable points 
+We get the binary maps for all the models in suitability threshold of 0.9 and extract the number of pixels above this threshold in order to get a relative predicted area. Here we show the trend from present (Figure 3A) to past of the the projected area of *Sciurus aberti* along the time line (Figure 3F). The trend pattern exhibits an inverted U-shape, showing that the present area is similar to the 120 000 area, with a maximum in 22 000 coinciding with the Last Glacial Maximum in North America (Figure 3B). We highlight three other notable scenarios, the first local minimum after the interglacial maximum appears in the year 30 000 (Figure 3C) coinciding with a distribution similar to the present but with more suitable regions emerging in New Mexico and Colorado; a local maximum in year 62 000 at the middle of the trend line (Figure 3D), with a more suitable potential distribution towards the south, with conditions disappearing practically everywhere in the United States, except in the border with Sonora, but connecting the area of the Sierra Madre Occidental with Zacatecas, San Luis Potosí and the appearance of a corridor over the Transverse Volcanic Axis (from Jalisco to Tlaxcala); finally we show a minimum area of the whole time series in year 112 000. (Figure 3E), with the disappearance of conditions in practically all the places where there were expansions, preserving conditions only in some places of Chihuahua (Campo Verde and Tutuaca Natural Protected Areas), Durango and Arizona (Prescott and Sedona).
+
+
 <p align="center">
 ![A) Species distribution model for *Sciurus aberti* present distribution. B) Relative projected area for SDM in pixels acoording a threshold of 0.9 suitability for each past time-sliced environmental conditions. We can observe a maximum area corresponding to the last interglacial era and an inverted U-shape in the trend of the area along the time considered. Also It can be noted that the actual distribution has similar area to the coditions 120 000 years ago. B) and D) corresponds to distribution peaks along the time scale and C) and E) corresponds to minimum  ](all_figures/figure_3.png){width=100%}
 </p>
 
 ### SPA and Endemic Historic Area
-We get the suitability presence area (figure 2) delmited by a 0.5 and 0.9 threshold (Figure 4). The endemic region where the enviornmental conditions 90 \% del tiempo is the Sierra Madre Occidental, in the limits of Sonora, Chihuahua, Sinaloa and Durango. We correspond this Area to the *Sciurus aberti barbieri* subspecies. Also
+We get the suitability prevalence area delimited by a 0.5 and 0.9 threshold (Figure 4). The endemic region where the enviornmental conditions 90 \% of the time is the Sierra Madre Occidental, in the limits of Sonora, Chihuahua, Sinaloa and Durango. We correspond this Area to the *Sciurus aberti barbieri* subspecies. Also
 is notable that at 0.5 threshold, other regions seems to have stable conditions. We observe the area close to Coronado National Forest as well as Gila National Forest and Mescalero Reservation as suitable areas along time in the United States and some Areas of the Volcanic Belt in Mexico (Puebla, north of Guerrero State and Jalisco.  
 <p align="center">
 ![Suitability prevalence area. Here we observe the harmonic mean of suitability for each pixel along the distribucion from 0 to 1. The bold lines shows the the area when the harmonic mean es above 0.5 threshold (blud line) and 0.9 threshold (black line)](all_figures/figure_4.png){}
 </p>
 
-### Fst as a funciton of SPA and Fixation index projected in geography
+### $F_{st}$ as a funciton of SPA and Fixation index projected in geography
 
 For all the linear regressions performed (Table 1), the only one that had statistical significance is the one for the Sciurus aberti barberi population with an R-squared value of 0.794. 
 
@@ -227,14 +220,36 @@ It can be noted that S. a. aberti Coconino-Gila had an R-squared value greater t
 
 
 ```{r, figures-side, fig.show="hold", out.width="50%",  fig.cap="Linear regression for S a. barberi population A) SPA in all populations B) withouth barberi and chusensis populations. We can observe that in both cases the fixation index is explained with the SPA and the hypothesis holds without the imputation of the origin of the population (this means to add a 0 $F_{st}$ value for barberi population)", echo=FALSE}
+
+
 knitr::include_graphics(c("all_figures/figure_5a.png","all_figures/figure_5b.png"))
 ```
 
-
-From the model we extrapolated the values from SPA along the geography to new $F_{st}$ values to get a geographical projection of fixation index from *S. a. barberi* population. (Figure 6)   
+ 
+From the model we extrapolated the values from SPA along the geography to new $F_{st}$ values to get a geographical projection of fixation index from *S. a. barberi* population. (Figure 6). The lowest values are close to the Sierra Madre Occidental Area, in the limits of Chihuahua and Sonora States as well as Sinaloa and Durango, score higher near to the Tutuaca Wildlife regue There is also a hotspot between Sonora And arizona, near to Bisbee Arizona in United States as well as Naco Sonora y Mexico.  
+   
 
 <p align="center">
 ![Projection of the $F_{st}$ model to the geography in the actual distribution of *S aberti*](all_figures/figure_6.png){width=80%}
 </p>
+
+## Discussion
+
+With the current availability of occurrence data and models of potential distribution projected to past climate scenarios it is possible to find geographic patterns of differentiation in populations at an acceptable resolution (half a degree) that allows us to define sites where the species can potentially be found but share different degrees of genetic diversity. 
+
+Projections of genetic diversity in geography have been made in previous studies @van2012mapping. However in a general way they are extrapolations of observations, without a predictive model, which with some explanatory variable behind can explain in a statistically convincing way the information obtained from population genetics.
+
+We have shown a generalizable protocol for predicting patterns of population genetics in geography. In this way we link information on the evolutionary history of a taxon and its ecology. In addition, we provide a predictive vehicle that generates new geographic information applicable to decision making in both survey conduct and taxon conservation.
+
+
+Thanks to the theoretical support that we have briefly outlined in this paper, it is possible to explain the explanatory value of the Coefficient of determination for our linear model ($R^2 = 0.79 $), which is information coming from two completely different sources, without any correlation, but always guided by the premise of the evolutionary process as causal. 
+
+These maps represent a turning point in the conception of conservation. With the tool we propose in this study, it is possible to delimit conservation sites based on evidence of current and historical distribution and genetic diversity among different populations.
+
+While many conservation decisions are made on the basis of genetic diversity, studying the genetic structure of populations at a macro-scale is often very complicated, and making conservation decisions based on current distribution without taking into account the historical distribution of taxa can lead to a misguided conservation strategy.
+
+The generalization of our protocol and its implementation in tools widely used by biogeography allow its direct implementation in many case studies with available information, as well as the design of new questions, e.g. species assemblages under prevalence of environmental suitability. A research path was also established on whether the process of environmental stability over time is related to biodiversity.
+
+
 
 ### References
