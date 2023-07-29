@@ -110,22 +110,26 @@ genetic diversity in Tassel eared Squirrels}
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
 
-As a case study we consider squirrels (\emph{Sciurus aberti}), a species
-currently distributed in disjunct patches from the southern Rocky
-Mountains in the United States to the northern Sierra Madre Occidental
-in Mexico for which it is possible to find reliable information on both
-the genetic structure of its populations and its current distribution
-(Bono et al. 2018; Burgin et al. 2018).
-
-Our results reveal that fitness prevalence corresponds to the fixation
-index of \emph{S. aberti} populations with respect to a source
-population. Populations closer to the historical endemic area present a
-higher genetic diversity and a lower \(F_{st}\) value. Finally, this
-study allows us to add a biogeographic explanation to the results
-obtained with population genetic methods and to generate maps of this
-structure as tools to support conservation with a perspective that
-integrates both population genetics and historical patterns of species
-distribution.
+Genetic variation among populations exhibits biogeographic patterns. In
+this paper we establish a theoretical framework based on environmental
+Grinellian niches as a tool for modeling species distributions, as well
+as their projected past environmental scenarios to relate the present
+evolutionary history in both the geographic distribution and genetic
+structure of their populations. Thanks to the advance of next-generation
+sequencing technologies, as well as more accurate climate models and an
+enormous amount of information stored in biological collections, it is
+possible to implement this theoretical framework with the help of the
+joint analysis of spatial, environmental and genetic data, with tools
+that are widely distributed among biogeographers and evolutionary
+biologists. Our results reveal that when we have case of isolation by
+distance, suitability prevalence along time corresponds to the fixation
+index of populations with respect to a source population. Populations
+closer to the historical endemic area present a higher genetic diversity
+and a lower \(F_{st}\) value. This framework allows us to add a
+biogeographic explanation to the results obtained with population
+genetic methods and to generate maps of this structure as tools to
+support conservation with a perspective that integrates both population
+genetics and historical patterns of species distribution.
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
@@ -180,10 +184,10 @@ suitability}\label{environment-fitness-and-suitability}}
 We define \(\vec{e}_i =(e_1, e_2, ..., e_i )\) as a vector of
 environmental variables, that is, a point in the space of \(v\)
 environmental variables. Then \(R_i(\vec{e}_i)\) is a function that
-relates fitness to environment, that is, for a species with
+relates evolutionary fitness to environment, that is, for a species with
 non-overlapping generations, the population's net reproductive rate
-\(R_i\) is a measure of fitness that depends on environmental
-conditions.
+\(R_i\) is a measure of evolutionary fitness that depends on
+environmental conditions.
 
 That is, the sites in the geography \(\mathbf{G}_o\) that present
 positive growth rates are related to favorable conditions. If we take
@@ -226,10 +230,10 @@ where the intrinsic growth rate is positive.}
 \end{figure}
 
 This equation was proposed by Soberon and Peterson Soberón and Peterson
-(2020) to relate demographics to a function of fitness and environment.
-In that study they tested the validity with monthly variables and
-empirical values on a short time scale. relating life history parameters
-and the environmental suitability of niche models.
+(2020) to relate demographics to a function of evolutionary fitness and
+environment. In that study they tested the validity with monthly
+variables and empirical values on a short time scale. relating life
+history parameters and the environmental suitability of niche models.
 
 This set can be seen as a convex volume in environmental space and we
 relate this growth rate to an environmental suitability function bounded
@@ -245,20 +249,18 @@ databases, numerically approximating a convex surface with a surface
 
 Once we have an approximation of this volume, we consider that each
 point in the geography is static and has a trajectory in the
-environmental space and that for each trajectory the fitness function
-changes and therefore the suitability function changes but not
-accordingly. in a homogeneous way, if not more so that each site
+environmental space and that for each trajectory, the fitness function
+changes and, therefore, the suitability function changes but not
+accordingly, in a homogeneous way, if not more so that each site
 presents different displacement rates and different demographic rates.
 
-The objective of this theoretical approach is not to know the shape of
-the function of \(R_0\) but rather to find this local variation relating
+The goal of this theoretical approach is not to know the shape of the
+function of \(R_0\) but rather to find this local variation relating
 this value of \(R_0\) and the function \(\mathbf{N}_F\) with a function
 \$ S\_i(~vec\{e\}\_i)\$ of environmental suitability that can be
 estimated from known methods of applied mathematics and machine learning
 (for example the case of Maxent, Phillips, Anderson, and Schapire
-(2006)).
-
-Es decir:
+(2006)), i.e.~:
 
 \[
 N_i \propto  S_i(\vec{e}_i)
@@ -334,21 +336,21 @@ We call this harmonic mean of environmental suitability
 \(1\), since it reflects the rate of population growth as a function of
 environment over a period of time. Thus we have a way to check that the
 loss of heterozygosity (through the fixation index \(F_{st}\)) is
-inversely proportional to the fitness prevalence for an \(i\) site in
-the geography:
+inversely proportional to the suitability prevalence for an \(i\) site
+in the geography:
 
 \[
 F_{i}^{st}= \frac{\beta_0}{S_i} + \beta_1
 \] If we consider all sites in the available geography, we call this
-harmonic mean of fitness \emph{Suitability prevalence Area}
-\(\mathbf{S} = \{S_i | S_i > k\}\) since we expect that areas where the
-\(F_{st}\) is lower are in areas where the prevalence over time is
-higher, i.e.~environmental conditions remain suitable for a significant
-period of time and therefore no effects of genetic drift of populations
-have occurred. Conversely, it is expected that in populations with a
-high fixation index value, fitness will not have prevailed over the same
-time interval even though conditions currently exist and populations are
-present.
+harmonic mean \emph{Suitability Prevalence Area}
+\(\mathbf{S} = \{S_i | S_i > k\}\) (SPA) since we expect that areas
+where the \(F_{st}\) is lower are in areas where the prevalence over
+time is higher, i.e.~environmental conditions remain suitable for a
+significant period of time and therefore no effects of genetic drift of
+populations have occurred. Conversely, it is expected that in
+populations with a high fixation index value, suitability will not have
+prevailed over the same time interval even though conditions currently
+exist and populations are present.
 
 \hypertarget{methods}{%
 \subsection{Methods}\label{methods}}
@@ -407,8 +409,13 @@ consist of:
   A map is generated with all the values interpolated by the model.
 \end{itemize}
 
-To test our model we use the Aberti squirrel (\emph{Sciurus aberti}) as
-a case study because:
+As a case study we consider squirrels (\emph{Sciurus aberti}), a species
+currently distributed in disjunct patches from the southern Rocky
+Mountains in the United States to the northern Sierra Madre Occidental
+in Mexico for which it is possible to find reliable information on both
+the genetic structure of its populations and its current distribution
+(Bono et al. 2018; Burgin et al. 2018). In order to select this species,
+we list the following considerations:
 
 \begin{itemize}
 \tightlist
@@ -418,9 +425,6 @@ a case study because:
   The subspecies are geographically isolated, since they are found in
   pine forests surrounded by desert. Therefore we can consider the
   assumption of isolation by distance (Wright 1943).
-\item
-  There are sufficient occurrence records for the entire range of the
-  known distribution.
 \item
   It has low speciation rate (0.25) (Upham, Esselstyn, and Jetz 2019),
   therefore, we assume that its fundamental niche is stable over time.
@@ -591,7 +595,7 @@ SPA}\label{fixation-index-as-a-functino-of-spa}}
 To test our hypothesis of genetic diversity as a function of
 environmental suitability prevalence, from a set of genetically
 structured populations, a matrix of fixation indices between populations
-is considered. For this work we considerer the data from @Bono et al.
+is considered. For this work we considerer the data from Bono et al.
 (2018). It consideres 10 populations along the known distribution and
 provides values of \(F_st\) between this populations in matrix form. The
 matrix was transformed into a table as pairs between populations with
@@ -702,32 +706,25 @@ geography}{F\_\{st\} as a funciton of SPA and Fixation index projected in geogra
 
 For all the linear regressions performed (Table 1), the only one that
 had statistical significance is the one for the Sciurus aberti barberi
-population with an R-squared value of 0.794.
+population with an \(R^2\) value of \(0.794\).
 
 \begin{longtable}[]{@{}ccc@{}}
-\caption{R squared from linear models (fixation index as a function of
-suitability prevalence area). The only R squared with statistical
-significance is barberi}\tabularnewline
 \toprule\noalign{}
-population & r.squared & p.value \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-population & r.squared & p.value \\
+Population & R squared & p value \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-S. a. aberti Carson-SFW & 0.000 & 0.962 \\
-S. a. aberti Coconino-Gila & 0.131 & 0.304 \\
-S. a. aberti MT-Zuni & 0.002 & 0.894 \\
-S. a. aberti San Juan & 0.000 & 0.952 \\
-S. a. barberi & 0.794 & 0.001 \\
-S. a. chuscensis E & 0.002 & 0.892 \\
-S. a. chuscensis W & 0.018 & 0.713 \\
-S. a. ferreus Carson E & 0.040 & 0.581 \\
-S. a. ferreus Pike & 0.000 & 0.967 \\
-S. a. kaibabensis & 0.005 & 0.841 \\
+\emph{S. a. aberti Carson-SFW} & 0 & 0.962 \\
+\emph{S. a. aberti Coconino-Gila} & 0.131 & 0.304 \\
+\emph{S. a. aberti MT-Zuni} & 0.002 & 0.894 \\
+\emph{S. a. aberti San Juan} & 0 & 0.952 \\
+\emph{S. a. barberi} & 0.794 & 0.001 \\
+\emph{S. a. chuscensis E} & 0.002 & 0.892 \\
+\emph{S. a. chuscensis W} & 0.018 & 0.713 \\
+\emph{S. a. ferreus Carson E} & 0.04 & 0.581 \\
+\emph{S. a. ferreus Pike} & 0 & 0.967 \\
+\emph{S. a. kaibabensis} & 0.005 & 0.841 \\
 \end{longtable}
 
 It can be noted that S. a. aberti Coconino-Gila had an R-squared value
