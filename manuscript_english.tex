@@ -99,8 +99,7 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Suitability prevalence area index in late quaternary explains
-genetic diversity in Tassel eared Squirrels}
+\title{Suitability prevalence area index in the late Quaternary explains genetic diversity in Tassel-eared Squirrels (\textit{Sciurus aberti})}
 \author{Norma Hernandez, Angel Robles Nathan Upham}
 \date{2023-06-27}
 
@@ -110,21 +109,9 @@ genetic diversity in Tassel eared Squirrels}
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
 
-Genetic variation among populations is known to exhibit biogeographic patterns in many species, but general rules of spatial genetic variation have not been established. In
-this paper, we establish a theoretical framework based on projecting environmental
-Grinellian niches back through time to relate the present geographic distribution of population genetic
-structure to a given species' historical evolutionary context. Thanks to the advance of next-generation
-sequencing technologies, as well as more accurate climate models and an
-enormous amount of information stored in biological collections, it is
-possible to implement this theoretical framework directly. We use the Tassel-earred Squirrel (\textit{Sciurus aberti}) as a model to jointly analyze spatial, environmental and genetic data and predict the historical endemic area of this species. Our results reveal that in cases of genetic isolation by
+Genetic variation among populations is known to exhibit biogeographic patterns in many species, but general rules of spatial genetic variation have not been established. In this paper, we establish a theoretical framework based on projecting environmental Grinellian niches back through time to relate the present geographic distribution of population genetic structure to a given species' historical evolutionary context. Thanks to the advance of next-generation sequencing technologies, as well as more accurate climate models and an enormous amount of information stored in biological collections, it is possible to implement this theoretical framework directly. We use the Tassel-earred Squirrel (\textit{Sciurus aberti}) as a model to jointly analyze spatial, environmental and genetic data and predict the historical endemic area of this species. Our results reveal that in cases of genetic isolation by
 geographic distance, suitability prevalence along time corresponds to the genetic fixation
-index of populations with respect to a source population. Populations
-closer to the historical endemic area present a higher genetic diversity
-and a lower \(F_{st}\) value. This empirical example fits into a theoretical framework, which allows us two advances: (i) we can now add a
-biogeographic explanation to the results obtained with population
-genetic methods; and (ii) we can generate maps of this genetic structure as predictive tools to
-support biodiversity conservation efforts. Overall, this work advances a perspective that integrates population
-genetics with historical patterns of species distribution.
+index of populations with respect to a source population. Populations closer to the historical endemic area present a higher genetic diversity and a lower \(F_{st}\) value. This empirical example fits into a theoretical framework, which allows us two advances: (i) we can now add a biogeographic explanation to the results obtained with population genetic methods; and (ii) we can generate maps of this genetic structure as predictive tools to support biodiversity conservation efforts. Overall, this work advances a perspective that integrates population genetics with historical patterns of species distribution.
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
@@ -153,18 +140,15 @@ Nogués-Bravo 2009) and population genetics theories (Lira-Noriega and
 Manthey 2014). Importantly, these predicted patterns of population structure will serve as a type of \textit{a priori} hypothesis for the influence of abiotic factors alone, with the empirical detection of deviations from this hypothesis indicating that biotic factors such as competition or predation from other species have also impacted the observed population structure.
 
 In this work, we propose a method to find what we call the Suitability Prevalence Area
-(SPA) that is the time-averaged area of highest environmental suitability for a given species. The SPA is an index with a double purpose: 1) identifying areas of greatest likelihood for the historical distribution of the target species; and 2) predicting the expected patterns of genetic diversity given the inferred history of population stability and connectivity.
+(SPA) that is the time-averaged area of highest environmental suitability for a given species, defined as locations with ≥ 90\% suitability over a historical time period. The SPA is an index with a double purpose: 1) identifying areas of greatest likelihood for the historical distribution of a target species (i.e., historical endemism); and 2) predicting the expected patterns of genetic diversity given the species' inferred history of population stability and connectivity. 
 
-To obtain the SPA, we overlapped historical reconstructions of the
-geographical distribution of a target species estimated every 2,000 years from the present day until 120,000 years ago, in each time interval recording the environmental suitability at each modeled site.
+As a case study, we consider Tassel-eared Squirrels (\emph{Sciurus aberti}), a species of rodent that is currently distributed in disjunct patches from the southern Rocky Mountains in the United States to the northern Sierra Madre Occidental in Mexico for which it is possible to find reliable information on both the genetic structure of its populations and its current distribution (Bono et al. 2018; Burgin et al. 2018). To obtain the SPA for \textit{S. aberti}, we overlapped historical reconstructions of the species' geographical distribution estimated every 2,000 years from the present day until 120,000 years ago, recording the environmental suitability in each time interval at each modeled site.
 
 Subsequently, we delimited historical endemic areas to locations where
-the prevalence of suitability remained at 90\% during this period. From
-the fixation index calculated with respect to populations in the
-historical endemic areas, a statistical model of the fixation index as a
-function of SPA was performed. With this statistical model, the fixation
-index values were projected to the current distribution to obtain a map
-with the geographic pattern of this index.
+the prevalence of suitability remained at 90\% during this period. 
+
+Subsequently, we calculated the fixation index (\(F_{st}\)) of the genetic relatedness among populations and compared that to the SPA index of historical endemism, constructing a statistical model of the fixation index as a function of the SPA. With this statistical model, the \(F_{st}\) values were projected to the current geographic distribution of \textit{S. aberti} to obtain a predictive map of expected \(F_{st}\) values over space.
+
 
 \hypertarget{theoretical-basis}{%
 \subsubsection{Theoretical basis}\label{theoretical-basis}}
@@ -176,33 +160,30 @@ suitability}\label{environment-fitness-and-suitability}}
 We define \(\vec{e}_i =(e_1, e_2, ..., e_i )\) as a vector of
 environmental variables, that is, a point in the space of \(v\)
 environmental variables. Then \(R_i(\vec{e}_i)\) is a function that
-relates evolutionary fitness to environment, that is, for a species with
+relates evolutionary fitness to environment. That is, for a species with
 non-overlapping generations, the population's net reproductive rate
 \(R_i\) is a measure of evolutionary fitness that depends on
 environmental conditions.
 
-That is, the sites in the geography \(\mathbf{G}_o\) that present
-positive growth rates are related to favorable conditions. If we take
+In other words, the sites in the geography \(\mathbf{G}_o\) that present
+positive population growth rates are related to favorable environmental conditions. If we take
 the set of places in ambient space where these values are greater than a
-threshold, we can define a volume in multidimensional space such that
-\(R(\vec{e})\) is always positive and greater than this threshold, that
-is \(\mathbf{N}_F(t) = \{\vec{e} | R_0(\vec{e}(t)) > k \}\).
+certain threshold, we can define a volume in multidimensional space such that
+\(R(\vec{e})\) is always positive and greater than this threshold, as \(\mathbf{N}_F(t) = \{\vec{e} | R_0(\vec{e}(t)) > k \}\).
 
-This is a way of expressing the fundamental niche as a function of
-environmental conditions. So we can map each point of geography to
-ambient space. Thus, for each site in the geography there will
+This is a way of expressing the fundamental niche \(\mathbf{N}_F\) as a function of
+environmental conditions. Thus, for each site in the geography there will
 correspond a site in the environmental space with different
-environmental conditions and different growth rates. However all sites
+environmental conditions and different growth rates. However, all sites
 within the region defined by \(\mathbf{N}_F\) will have viable
-populations and positive rates. However, we assume that the environment
+populations and positive growth rates. Nonetheless, we assume that the environment
 is dynamic and each geographic point is static, so for each site in
-geographic space this growth rate depends on the environment and
-therefore is different at each time.
+geographic space this growth rate depends on the environmental conditions and
+therefore growth rate changes in value at each time interval.
 
-Thus locally the growth rate will be related to the local population
+Locally, the growth rate will be related to the local population
 size as long as it is within the boundary defined by \(\mathbf{N}_F\).
-Therefore, the local population size as a function of the intrinsic rate
-that depends on the change in environmental conditions over time is:
+Therefore, the local population size as a function of the intrinsic growth rate, which depends on the change in environmental conditions over time, can be expressed as:
 \(N_i(t+1) = R_0(\vec{e_i}(t) ) N_i(t)\). That is, the locally effective
 population size is a function of ideal environmental conditions.
 
@@ -401,7 +382,7 @@ consist of:
   A map is generated with all the values interpolated by the model.
 \end{itemize}
 
-As a case study we consider squirrels (\emph{Sciurus aberti}), a species
+As a case study, we consider squirrels (\emph{Sciurus aberti}), a species
 currently distributed in disjunct patches from the southern Rocky
 Mountains in the United States to the northern Sierra Madre Occidental
 in Mexico for which it is possible to find reliable information on both
