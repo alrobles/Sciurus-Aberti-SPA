@@ -110,34 +110,29 @@ genetic diversity in Tassel eared Squirrels}
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
 
-Genetic variation among populations exhibits biogeographic patterns. In
-this paper we establish a theoretical framework based on environmental
-Grinellian niches as a tool for modeling species distributions, as well
-as their projected past environmental scenarios to relate the present
-evolutionary history in both the geographic distribution and genetic
-structure of their populations. Thanks to the advance of next-generation
+Genetic variation among populations is known to exhibit biogeographic patterns in many species, but general rules of spatial genetic variation have not been established. In
+this paper, we establish a theoretical framework based on projecting environmental
+Grinellian niches back through time to relate the present geographic distribution of population genetic
+structure to a given species' historical evolutionary context. Thanks to the advance of next-generation
 sequencing technologies, as well as more accurate climate models and an
 enormous amount of information stored in biological collections, it is
-possible to implement this theoretical framework with the help of the
-joint analysis of spatial, environmental and genetic data, with tools
-that are widely distributed among biogeographers and evolutionary
-biologists. Our results reveal that when we have case of isolation by
-distance, suitability prevalence along time corresponds to the fixation
+possible to implement this theoretical framework directly. We use the Tassel-earred Squirrel (\textit{Sciurus aberti}) as a model to jointly analyze spatial, environmental and genetic data and predict the historical endemic area of this species. Our results reveal that in cases of genetic isolation by
+geographic distance, suitability prevalence along time corresponds to the genetic fixation
 index of populations with respect to a source population. Populations
 closer to the historical endemic area present a higher genetic diversity
-and a lower \(F_{st}\) value. This framework allows us to add a
+and a lower \(F_{st}\) value. This empirical example fits into a theoretical framework, which allows us two advances: (i) we can now add a
 biogeographic explanation to the results obtained with population
-genetic methods and to generate maps of this structure as tools to
-support conservation with a perspective that integrates both population
-genetics and historical patterns of species distribution.
+genetic methods; and (ii) we can generate maps of this genetic structure as predictive tools to
+support biodiversity conservation efforts. Overall, this work advances a perspective that integrates population
+genetics with historical patterns of species distribution.
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
 
-The current distributions of species do not always correspond to their
-historical distributions over evolutionarily significant periods. This
-is because environmental conditions are not static over time; species
-tend to distribute where conditions are most favorable.
+Current species distributions do not always correspond to their
+historical distributions over evolutionarily significant periods. Often they differ substantially, such as in the case of postglacial range expansion in high latitude environments (e.g., REFS). This
+is because environmental conditions are highly dynamic over time, and species
+tend to track those environments, distributing where conditions are most favorable. That is, species environmental niches tend to be conserved (REF).
 
 It follows from this relationship between environment and species
 distribution that population size also varies with time. This variation
@@ -145,26 +140,23 @@ in population size is related to the effective population size \(N_e\)
 (Karlin 1968), so that an index reflecting changes in environmental
 conditions in geography might be expected to be related to \(N_e\) and
 thus to indicators of population structure such as the fixation index
-\(F_{st}\). Thus, it is possible to relate patterns of changes in the
+\(F_{st}\). It should therefore be possible to relate patterns of change in the
 distribution of species to the genetic structure of their populations
 using a statistical model that explains this relationship.
 
-With this approach we can predict the geographic pattern of population
-structure from environmental information. This approach is strongly
+With this approach we expect to predict the geographic pattern of population-genetic
+structure from abiotic environmental information alone. This approach is strongly
 driven by advances in currently available climate simulations (Leonardi
-et al. 2023; Krapp et al. 2021), as well as next generation sequencing
+et al. 2023; Krapp et al. 2021), as well as next-generation sequencing
 data, and supported by both ecological niche (Thorup et al. 2021;
 Nogués-Bravo 2009) and population genetics theories (Lira-Noriega and
-Manthey 2014).
+Manthey 2014). Importantly, these predicted patterns of population structure will serve as a type of \textit{a priori} hypothesis for the influence of abiotic factors alone, with the empirical detection of deviations from this hypothesis indicating that biotic factors such as competition or predation from other species have also impacted the observed population structure.
 
-In this work we propose a method to find the Suitability Prevalence Area
-(SPA) as an index with a double purpose: 1) to find endemic areas to
-delimit the historical distribution of the species and 2) to explain the
-patterns of genetic diversity.
+In this work, we propose a method to find what we call the Suitability Prevalence Area
+(SPA) that is the time-averaged area of highest environmental suitability for a given species. The SPA is an index with a double purpose: 1) identifying areas of greatest likelihood for the historical distribution of the target species; and 2) predicting the expected patterns of genetic diversity given the inferred history of population stability and connectivity.
 
-To obtain the SPA, we performed a historical reconstruction of the
-geographical range back to 120 000 BC at 2 000 year intervals and
-recorded the environmental suitability at each site.
+To obtain the SPA, we overlapped historical reconstructions of the
+geographical distribution of a target species estimated every 2,000 years from the present day until 120,000 years ago, in each time interval recording the environmental suitability at each modeled site.
 
 Subsequently, we delimited historical endemic areas to locations where
 the prevalence of suitability remained at 90\% during this period. From
@@ -588,8 +580,8 @@ pixel has had ideal conditions. For our study, we consider the value of
 years, which is a significantly evolutionary time to fix genetic
 patterns at the population level.
 
-\hypertarget{fixation-index-as-a-functino-of-spa}{%
-\subsubsection{Fixation index as a functino of
+\hypertarget{fixation-index-as-a-function-of-spa}{%
+\subsubsection{Fixation index as a function of
 SPA}\label{fixation-index-as-a-functino-of-spa}}
 
 To test our hypothesis of genetic diversity as a function of
@@ -597,13 +589,13 @@ environmental suitability prevalence, from a set of genetically
 structured populations, a matrix of fixation indices between populations
 is considered. For this work we considerer the data from Bono et al.
 (2018). It consideres 10 populations along the known distribution and
-provides values of \(F_st\) between this populations in matrix form. The
+provides values of \(F_{st}\) between this populations in matrix form. The
 matrix was transformed into a table as pairs between populations with
 index values between each pair. The values of the population with
-itself, i.e.~\(0\), were included. Subsequently, georeferences were
+itself, i.e.~\(0\), were included. Subsequently, geografic references were
 obtained for each population considered in the fixation index matrix.
-From this geo-referencing the SPA value for each population was
-extracted. Finally, the SPA value was aligned in the table of fixation
+The SPA value for each population was
+extracted for each population site. Finally, the SPA value was aligned in the table of fixation
 index pairs. In total the table has 4 columns: source population, target
 population, fixation index and SPA of the target population. This table
 was separated by source population groups to generate a set of linear
@@ -715,16 +707,16 @@ Population & R squared & p value \\
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\emph{S. a. aberti Carson-SFW} & 0 & 0.962 \\
-\emph{S. a. aberti Coconino-Gila} & 0.131 & 0.304 \\
-\emph{S. a. aberti MT-Zuni} & 0.002 & 0.894 \\
-\emph{S. a. aberti San Juan} & 0 & 0.952 \\
-\emph{S. a. barberi} & 0.794 & 0.001 \\
-\emph{S. a. chuscensis E} & 0.002 & 0.892 \\
-\emph{S. a. chuscensis W} & 0.018 & 0.713 \\
-\emph{S. a. ferreus Carson E} & 0.04 & 0.581 \\
-\emph{S. a. ferreus Pike} & 0 & 0.967 \\
-\emph{S. a. kaibabensis} & 0.005 & 0.841 \\
+\textit{S. a. aberti Carson-SFW} & 0 & 0.962 \\
+\textit{S. a. aberti Coconino-Gila} & 0.131 & 0.304 \\
+\textit{S. a. aberti MT-Zuni} & 0.002 & 0.894 \\
+\textit{S. a. aberti San Juan} & 0 & 0.952 \\
+\textit{S. a. barberi} & 0.794 & 0.001 \\
+\textit{S. a. chuscensis E} & 0.002 & 0.892 \\
+\textit{S. a. chuscensis W} & 0.018 & 0.713 \\
+\textit{S. a. ferreus Carson E} & 0.04 & 0.581 \\
+\textit{S. a. ferreus Pike} & 0 & 0.967 \\
+\textit{S. a. kaibabensis} & 0.005 & 0.841 \\
 \end{longtable}
 
 It can be noted that S. a. aberti Coconino-Gila had an R-squared value
