@@ -99,7 +99,7 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Suitability prevalence area index in the late Quaternary explains genetic diversity in Tassel-eared Squirrels (\textit{Sciurus aberti})}
+\title{Environmental suitability throughout the late Quaternary explains population genetic diversity}
 \author{Norma Hernandez, Angel Robles Nathan Upham}
 \date{2023-06-27}
 
@@ -109,17 +109,17 @@
 \hypertarget{abstract}{%
 \subsection{Abstract}\label{abstract}}
 
-Genetic variation among populations is known to exhibit biogeographic patterns in many species, but general rules of spatial genetic variation have not been established. In this paper, we establish a theoretical framework based on projecting environmental Grinellian niches back through time to relate the present geographic distribution of population genetic structure to a given species' historical evolutionary context. Thanks to the advance of next-generation sequencing technologies, as well as more accurate climate models and an enormous amount of information stored in biological collections, it is possible to implement this theoretical framework directly. We use the Tassel-earred Squirrel (\textit{Sciurus aberti}) as a model to jointly analyze spatial, environmental and genetic data and predict the historical endemic area of this species. Our results reveal that in cases of genetic isolation by
-geographic distance, suitability prevalence along time corresponds to the genetic fixation
-index of populations with respect to a source population. Populations closer to the historical endemic area present a higher genetic diversity and a lower \(F_{st}\) value. This empirical example fits into a theoretical framework, which allows us two advances: (i) we can now add a biogeographic explanation to the results obtained with population genetic methods; and (ii) we can generate maps of this genetic structure as predictive tools to support biodiversity conservation efforts. Overall, this work advances a perspective that integrates population genetics with historical patterns of species distribution.
+Genetic variation among populations is known to exhibit biogeographic patterns in many species, but general rules of spatial genetic variation have not been established. In this paper, we establish a theoretical framework based on projecting environmental Grinellian niches back through time to relate the present geographic distribution of population genetic structure to a given species' historical evolutionary context. 
+
+Thanks to the advance of next-generation sequencing technologies, as well as more accurate climate models and an enormous amount of information stored in biological collections, it is possible to implement this theoretical framework directly. We use as a case study the Tassel-eared Squirrel (\textit{Sciurus aberti}) to jointly analyze spatial, environmental, and genetic data to predict the historical endemic area of this species. Our results reveal that in cases of genetic isolation by geographic distance, the prevalence of environmental suitability over time corresponds to the genetic fixation index of populations with respect to a source population. Populations closer to the historical endemic area present a higher genetic diversity and a lower \(F_{st}\) value.
+
+This empirical example fits into a theoretical framework, which allows us two advances: (i) we can now add a biogeographic explanation to the results obtained with population genetic methods; and (ii) we can generate maps of this genetic structure as predictive tools to support biodiversity conservation efforts. Overall, this work advances a perspective that integrates population genetics with historical patterns of species distribution.
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
 
 Current species distributions do not always correspond to their
-historical distributions over evolutionarily significant periods. Often they differ substantially, such as in the case of postglacial range expansion in high latitude environments (e.g., REFS). This
-is because environmental conditions are highly dynamic over time, and species
-tend to track those environments, distributing where conditions are most favorable. That is, species environmental niches tend to be conserved (REF).
+historical distributions over evolutionarily significant periods. Often they differ substantially, such as in the case of postglacial range expansion in high latitude environments (e.g., REFS). This is because environmental conditions are highly dynamic over time, and speciestend  to track those environments, distributing where conditions are most favorable. That is, species environmental niches tend to be conserved (REF).
 
 It follows from this relationship between environment and species
 distribution that population size also varies with time. This variation
@@ -139,13 +139,10 @@ data, and supported by both ecological niche (Thorup et al. 2021;
 Nogués-Bravo 2009) and population genetics theories (Lira-Noriega and
 Manthey 2014). Importantly, these predicted patterns of population structure will serve as a type of \textit{a priori} hypothesis for the influence of abiotic factors alone, with the empirical detection of deviations from this hypothesis indicating that biotic factors such as competition or predation from other species have also impacted the observed population structure.
 
-In this work, we propose a method to find what we call the Suitability Prevalence Area
-(SPA) that is the time-averaged area of highest environmental suitability for a given species, defined as locations with ≥ 90\% suitability over a historical time period. The SPA is an index with a double purpose: 1) identifying areas of greatest likelihood for the historical distribution of a target species (i.e., historical endemism); and 2) predicting the expected patterns of genetic diversity given the species' inferred history of population stability and connectivity. 
+In this work, we propose a method to find an index that we call the Suitability Prevalence Area
+(SPA) that is the area of highest environmental suitability for a given species over a historical time period. The SPA is an index with a double purpose: 1) identifying areas of greatest likelihood for the historical distribution of a target species (i.e., historical endemism); and 2) to explain the expected patterns of genetic diversity given the species' inferred history of population stability and connectivity. 
 
 As a case study, we consider Tassel-eared Squirrels (\emph{Sciurus aberti}), a species of rodent that is currently distributed in disjunct patches from the southern Rocky Mountains in the United States to the northern Sierra Madre Occidental in Mexico for which it is possible to find reliable information on both the genetic structure of its populations and its current distribution (Bono et al. 2018; Burgin et al. 2018). To obtain the SPA for \textit{S. aberti}, we overlapped historical reconstructions of the species' geographical distribution estimated every 2,000 years from the present day until 120,000 years ago, recording the environmental suitability in each time interval at each modeled site.
-
-Subsequently, we delimited historical endemic areas to locations where
-the prevalence of suitability remained at 90\% during this period. 
 
 Subsequently, we calculated the fixation index (\(F_{st}\)) of the genetic relatedness among populations and compared that to the SPA index of historical endemism, constructing a statistical model of the fixation index as a function of the SPA. With this statistical model, the \(F_{st}\) values were projected to the current geographic distribution of \textit{S. aberti} to obtain a predictive map of expected \(F_{st}\) values over space.
 
@@ -161,7 +158,7 @@ We define \(\vec{e}_i =(e_1, e_2, ..., e_i )\) as a vector of
 environmental variables, that is, a point in the space of \(v\)
 environmental variables. Then \(R_i(\vec{e}_i)\) is a function that
 relates evolutionary fitness to environment. That is, for a species with
-non-overlapping generations, the population's net reproductive rate
+non-overlapping generations, the population's net reproductive rate 
 \(R_i\) is a measure of evolutionary fitness that depends on
 environmental conditions.
 
@@ -184,8 +181,7 @@ therefore growth rate changes in value at each time interval.
 Locally, the growth rate will be related to the local population
 size as long as it is within the boundary defined by \(\mathbf{N}_F\).
 Therefore, the local population size as a function of the intrinsic growth rate, which depends on the change in environmental conditions over time, can be expressed as:
-\(N_i(t+1) = R_0(\vec{e_i}(t) ) N_i(t)\). That is, the locally effective
-population size is a function of ideal environmental conditions.
+\(N_i(t+1) = R_0(\vec{e_i}(t) ) N_i(t)\). That is, the locally population size is a function of ideal environmental conditions.
 
 We start by considering this defined volume of the set of \(R_0\) as a
 set of trajectories for each point from geographic space to
@@ -202,15 +198,14 @@ moves within the ambient space entering and exiting the volume (niche)
 where the intrinsic growth rate is positive.}
 \end{figure}
 
-This equation was proposed by Soberon and Peterson Soberón and Peterson
-(2020) to relate demographics to a function of evolutionary fitness and
+This equation was proposed by Soberon and Peterson (2020) to relate demographics to a function of evolutionary fitness and
 environment. In that study they tested the validity with monthly
 variables and empirical values on a short time scale. relating life
 history parameters and the environmental suitability of niche models.
 
 This set can be seen as a convex volume in environmental space and we
 relate this growth rate to an environmental suitability function bounded
-between \(0\) and \(1\), for example, for a unimodal multivariate pdf,
+between \(0\) and \(1\), for example, for a unimodal multivariate probability density function,
 it would be equivalent to the distance from the maximum of the function.
 That is, the fitness-related environmental suitability can be any
 function such that it is \(0\) if \(R_i(\vec{e}_i) > 1\) and \(1\) when
@@ -228,8 +223,8 @@ accordingly, in a homogeneous way, if not more so that each site
 presents different displacement rates and different demographic rates.
 
 The goal of this theoretical approach is not to know the shape of the
-function of \(R_0\) but rather to find this local variation relating
-this value of \(R_0\) and the function \(\mathbf{N}_F\) with a function
+function of \(R\) but rather to find this local variation relating
+this value of \(R\) and the function \(\mathbf{N}_F\) with a function
 \$ S\_i(~vec\{e\}\_i)\$ of environmental suitability that can be
 estimated from known methods of applied mathematics and machine learning
 (for example the case of Maxent, Phillips, Anderson, and Schapire
@@ -295,7 +290,7 @@ considered, For simplification in the index we select a \(N_i\)
 population in the geography and infer that locally, this population is
 proportional to the environmental suitability in each time considered,
 i. e. \(N_{j} \propto S_{j}(\vec{e}_{j})\) (each index \(j\) is for the
-generation time), as we describe above, so we can asume an harmonic mean
+generation time), as we describe above, so we can assume an harmonic mean
 of suitabilities
 \(\frac{1}{\tau}\sum_{j = 1}^{\tau} \frac{1}{S_j} = \frac{1}{S}\) and
 substitue in the previous equation:
@@ -314,7 +309,9 @@ in the geography:
 
 \[
 F_{i}^{st}= \frac{\beta_0}{S_i} + \beta_1
-\] If we consider all sites in the available geography, we call this
+\]
+
+If we consider all sites in the available geography, we call this
 harmonic mean \emph{Suitability Prevalence Area}
 \(\mathbf{S} = \{S_i | S_i > k\}\) (SPA) since we expect that areas
 where the \(F_{st}\) is lower are in areas where the prevalence over
@@ -776,6 +773,10 @@ studies with available information, as well as the design of new
 questions, e.g.~species assemblages under prevalence of environmental
 suitability. A research path was also established on whether the process
 of environmental stability over time is related to biodiversity.
+
+Other topics to cover
+- Dependency on \textit{Pinus ponderosa} -- is in doubt, P. p. arizonica in the USA, but in the Sierra Madre is a different pine species -- so there is likely more lability in the environmental niche than expected -- less of a Ponderosa specialist than assumed -- also the fungi that is associated with pines
+
 
 \hypertarget{references}{%
 \subsubsection*{References}\label{references}}
