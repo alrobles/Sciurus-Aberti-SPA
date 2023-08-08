@@ -56,7 +56,7 @@ non-overlapping generations, the population's net reproductive rate
 \(R_i\) is a measure of evolutionary fitness that depends on
 environmental conditions. 
 
-In other words, $\mathbf{G}_o$ is the set of sites in the geography that present positive growth rates related to favorable conditions. If we take the set of places in environmental space where these values are greater than a threshold, we can define a volume in multidimensional space such that $R(\vec{e})$ is always positive and greater than this threshold, that is $\mathbf{N}_F(t) = \{\vec{e} | R_0(\vec{e}(t)) > k \}$.
+In other words, $\mathbf{G}_o$ is the set of sites in the geography that present positive growth rates related to favorable conditions. If we take the set of places in environmental space where these values are greater than a threshold, we can define a volume in multidimensional space such that $R(\vec{e})$ is always positive and greater than this threshold, that is $\mathbf{N}_F(t) = \{\vec{e} | R(\vec{e}(t)) > k \}$.
 
 This is a way of expressing the fundamental niche \(\mathbf{N}_F\) as a function of environmental conditions. Thus, for each site in the geography there will
 correspond a site in the environmental space with different
@@ -72,9 +72,9 @@ Therefore, the local population size as a function of the intrinsic growth rate,
 \(N_i(t+1) = R(\vec{e_i}(t) ) N_i(t)\). That is, the locally population size is a function of ideal environmental conditions.
 
 
-We start by considering this defined volume of the set of \(R_0\) as a
+We start by considering this defined volume of the set of \(R\) as a
 set of trajectories for each point from geographic space to
-environmental space. Considering this rate fixed \(\mathbf{R}_0\) when
+environmental space. Considering this rate fixed \(\mathbf{R}\) when
 the population grows, that is,
 \(\mathbf{N}_F(t) = \{\vec{e} | R(\vec{e}(t)) > 1 \}\) and therefore
 any local population will have a positive growth rate.
